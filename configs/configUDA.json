@@ -1,0 +1,48 @@
+{
+  "model": "DeepLab",
+  "dataset": "cityscapes",
+
+  "training": {
+    "batch_size": 2,
+    "num_workers": 4,
+    "optimizer": "SGD",
+    "momentum": 0.9,
+    "num_iterations": 250000,
+    "learning_rate": 2.5e-4,
+    "lr_schedule": "Poly",
+    "lr_schedule_power": 0.9,
+    "weight_decay": 5e-4,
+    "use_sync_batchnorm": true,
+
+    "data": {
+      "split_id_list": 0,
+      "labeled_samples": 0,
+      "input_size": "128,512",
+      "scale": false,
+      "crop": true
+    },
+    "unlabeled": {
+      "train_unlabeled": true,
+      "consistency_weight": 1,
+      "consistency_loss": "CE",
+      "pixel_weight": "threshold_uniform",
+      "mix_mask": "class",
+      "flip": false,
+      "color_jitter": true,
+      "blur": true
+    }
+
+  },
+  "seed": 1,
+  "pretrained": "coco",
+  "ignore_label": 255,
+
+  "utils": {
+    "save_checkpoint_every": 5000,
+    "checkpoint_dir": "../saved/DeepLabv2",
+    "val_per_iter": 5000,
+    "tensorboard": true,
+    "log_per_iter": 100,
+    "save_best_model": true
+  }
+}
