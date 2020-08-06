@@ -17,7 +17,7 @@
     "data": {
       "split_id_list": 0,
       "labeled_samples": 0,
-      "input_size": "128,512",
+      "input_size": "512,512",
       "scale": false,
       "crop": true
     },
