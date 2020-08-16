@@ -1,3 +1,4 @@
+### Code used for the results in the paper  ["DACS: Domain Adaptation via Cross-domain Mixed Sampling"](https://arxiv.org/abs/2007.08702)
 # Getting started
 ## Prerequisite
 *  CUDA/CUDNN 
