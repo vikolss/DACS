@@ -15,5 +15,8 @@ python3 trainUDA.py --config ./configs/configUDA.json --name UDA
 
 python3 evaluateUDA.py --model-path *checkpoint.pth*
 
+# Pretrained models
 
+Pretrained model for GTA5 can be downloaded at: ([Link](https://drive.google.com/file/d/17BhIMBOD85RR-ritSBePHbmMM4wFDhQy/view?usp=sharing)), and should be unzipped in the '../saved' folder.
+This model peaked at 53.66 mIoU and ended at 53.04 mIoU.
 
